@@ -49,6 +49,13 @@ $(document).ready(function() {
         }
     };
 
+    // EVENT HANDLER FOR CONTENT TILE hover
+    $(".content-tile").on("mouseenter", function() {
+        $(this).find(".content-tile-text").css("opacity", 1);
+    }).on("mouseleave", function() {
+        $(this).find(".content-tile-text").css("opacity", 0);
+    });
+
     // FUNCTION TO DISPLAY PORTFOLIO INDEX
 
     var showPortfolio = function() {

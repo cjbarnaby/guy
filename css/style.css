@@ -123,14 +123,16 @@ body {
   margin: 0;
   position: relative;
   cursor: pointer;
+  text-align: center;
+  vertical-align: top;
+  margin: 1px;
 }
 
-.content-tile div {
+.content-tile > div {
   color: black;
   text-align: center;
-  font-size: 12px;
   letter-spacing: 2px;
-  position: absolute;
+  width: 90%;
 }
 
 .content-tile-header {
@@ -138,7 +140,11 @@ body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 10px 0px;
 }
 
 .content-tile-text {
@@ -146,7 +152,16 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-style:oblique;
+  font-weight:400;
+  transition: all 0.5s;
+  opacity: 0;
+}
 
+.content-tile:hover {
+  
 }
 
 .content-tile-campaign {
@@ -154,7 +169,10 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-
+  text-transform: uppercase;
+  width: 90%;
+  font-size: 10px;
+  padding-bottom: 10px;
 }
 
 /*///////////////////*/
