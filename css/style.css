@@ -110,31 +110,6 @@ body {
 .portfolio-box {
 
 }
-<<<<<<< HEAD
-.overlay-box {
-  margin: 0 auto;
-  border: 1px solid black;
-  max-width: 960px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%)
-}
-.content-row {
-
-}
-
-.content-tile {
-  position: relative;
-  width: 25%;
-  padding-bottom: 25%;
-  display: inline-block;
-  border: 1px solid black;
-}
-
-.content-tile div {
-  position: absolute;
-=======
 .content-row {
   font-size: 0;
   letter-spacing: 0;
@@ -145,8 +120,41 @@ body {
   width: 180px;
   height: 180px;
   background-color: rgba(255,255,255,0.8);
-  margin: 0
->>>>>>> something
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.content-tile div {
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+  position: absolute;
+}
+
+.content-tile-header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.content-tile-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.content-tile-campaign {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
 }
 
 /*///////////////////*/
