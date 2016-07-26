@@ -102,12 +102,29 @@ body {
 .portfolio-box {
   display: none;
 }
-.container-row {
+.overlay-box {
+  margin: 0 auto;
+  border: 1px solid black;
   max-width: 960px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
-.container-tile {
-  width: 30%;
-  height: auto;
+.content-row {
+
+}
+
+.content-tile {
+  position: relative;
+  width: 25%;
+  padding-bottom: 25%;
+  display: inline-block;
+  border: 1px solid black;
+}
+
+.content-tile div {
+  position: absolute;
 }
 
 /*////////////////*/
