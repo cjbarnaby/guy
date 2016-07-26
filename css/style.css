@@ -1,0 +1,136 @@
+
+body {
+    background-color: black;
+}
+/*/////////////*/
+/* FONT STYLES */
+/*/////////////*/
+
+body {
+    font-family: helvetica, sans-serif;
+    letter-spacing: 2px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+}
+.navigation-row div {
+    font-size: 1.25em;
+}
+.bottom {
+    font-size: .8em;
+}
+
+.top {
+    text-transform: uppercase;
+}
+
+.link {
+    cursor: pointer;
+}
+
+/*////////////*/
+/* CONTAINERS */
+/*////////////*/
+
+.container {
+    text-align: center;
+}
+.content-box {
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+}
+.poster {
+    height: 100vh;
+}
+
+.underlay {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*//////////*/
+/*NAVIGATION*/
+/*//////////*/
+
+.navigation {
+    position:absolute;
+    width: 100%;
+    margin: 15px 0px;
+    z-index: 10;
+}
+.navigation-row {
+    margin: 5px 0;
+}
+.navigation-row div {
+    display: inline-block;
+    margin: 5px 10px;
+    transition: all 1s;
+}
+.navigation-row div:hover {
+    webkit-transform: scale(1.1, 1.1);
+    ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
+.bottom {
+    text-align: right;
+}
+
+/*///////////////*/
+/* AWARDS IMAGES */
+/*///////////////*/
+
+.awards-group {
+    position: absolute;
+    bottom: -45px;
+    right: -25px;
+    transform: scale(0.6);
+}
+.awards-group img {
+    display: block;
+    margin: 10px;
+}
+
+/*////////////////*/
+/* HELPER CLASSES */
+/*////////////////*/
+
+@-webkit-keyframes blur {
+  0%  {   -webkit-filter: blur(0px);
+          filter: blur(0px); }
+  100% {   -webkit-filter: blur(10px);
+          filter: blur(10px); }
+}
+@keyframes blur {
+  0%  {   -webkit-filter: blur(0px);
+          filter: blur(0px); }
+  100% {   -webkit-filter: blur(10px);
+          filter: blur(10px); }
+}
+.filter {
+  -webkit-animation: blur 0.3s forwards;
+          animation: blur 0.3s forwards;
+}
+
+@-webkit-keyframes unblur {
+  0%  {   -webkit-filter: blur(10px);
+          filter: blur(10px); }
+  100% {   -webkit-filter: blur(0px);
+          filter: blur(0px); }
+}
+@keyframes unblur {
+  0%  {   -webkit-filter: blur(10px);
+          filter: blur(10px); }
+  100% {   -webkit-filter: blur(0px);
+          filter: blur(0px); }
+}
+
+.unfilter {
+  -webkit-animation: unblur 0.3s forwards;
+          animation: unblur 0.3s forwards;
+}
+
+.active {
+  font-weight: 700;
+}

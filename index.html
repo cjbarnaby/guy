@@ -3,31 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="normalize.css">
-
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     </head>
 <body>
-
     <div class="container">
+
         <div class="content-box">
+            <div class="underlay"></div>
             <div class="navigation">
                 <div class="navigation-row top">
-                    <div class="portfolio"><a href="portfolio.html">Portfolio</a></div>
-                    <div class="linked-in"><a href="http://www.linkedin.com" target="_blank">LinkedIn</a></div>
-                    <div class="blog"><a href="http://themilnercatastrophe.blogspot.com.au/" target="_blank">Blog</a></div>
-                    <div class="music"><a href="http://www.guymilnerharris.com" target="_blank">Music</a></div>
+                    <div><span id ="portfolio" class="link internal">Portfolio</span></div>
+                    <div><span id="linkedin" class="link external">LinkedIn</span></div>
+                    <div><span id="blog" class="link external">Blog</span></div>
+                    <div><span id="music" class="link external">Music</span></div>
                 </div>
                 <div class="navigation-row bottom">
-                    <div class="about-me"><a href="about.html">and ABOUT ME</a></div>
+                    <div class="about-me"><span id="about" class="link internal">and ABOUT ME</span></div>
                 </div>
             </div>
-            <img class="poster" src="assets/guy.png">
-            <div class="awards-group">
-    <img src="assets/aftrs.png" alt="" class="awards">
-    <img src="assets/awards.png" alt="" class="awards">
-    <img src="assets/pretty.png" alt="" class="awards">
-</div>
+            <div class="filter-box">
+                <img class="poster" src="assets/guy.png">
+                <div class="awards-group">
+                    <img src="assets/aftrs.png" alt="" class="awards">
+                    <img src="assets/awards.png" alt="" class="awards">
+                    <img src="assets/pretty.png" alt="" class="awards">
+                </div>
+            </div>
         </div>
     </div>
 
