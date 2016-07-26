@@ -103,7 +103,6 @@ body {
   display: none;
 }
 .container-row {
-  max-width: 960px;
 }
 .container-tile {
   width: 30%;
