@@ -40,19 +40,27 @@ body {
 .poster {
   height: 100vh;
 }
-
 .underlay, .overlay{
   position: fixed;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .overlay {
   background-color: rgba(255,255,255,0.5);
   z-index: 10;
 }
-
+.overlay-box {
+  display: none;
+  width: 590px;
+  height: 590px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 /*//////////*/
 /*NAVIGATION*/
 /*//////////*/
@@ -100,8 +108,9 @@ body {
 /*///////////////////*/
 
 .portfolio-box {
-  display: none;
+
 }
+<<<<<<< HEAD
 .overlay-box {
   margin: 0 auto;
   border: 1px solid black;
@@ -125,7 +134,24 @@ body {
 
 .content-tile div {
   position: absolute;
+=======
+.content-row {
+  font-size: 0;
+  letter-spacing: 0;
+  box-sizing: border-box;
 }
+.content-tile {
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  background-color: rgba(255,255,255,0.8);
+  margin: 0
+>>>>>>> something
+}
+
+/*///////////////////*/
+/* ABOUT CLASSES */
+/*///////////////////*/
 
 /*////////////////*/
 /* HELPER CLASSES */
