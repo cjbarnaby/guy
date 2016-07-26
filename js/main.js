@@ -24,12 +24,13 @@ $(document).ready(function() {
 
     // EVENT HANDLERS FOR INTERNAL NAV LINKS
     $(".internal").on("click", function() {
-        $(".overlay").hide();
+        var link = $(this).attr("id");
+        $(".overlay, .overlay-box").hide();
         $(".filter-box").addClass("filter");
         $(".filter-box").removeClass("unfilter");
         $(".internal").removeClass("active");
         $(this).addClass("active");
-        showOverlay($(this).attr("id"));
+        showOverlay(link);
     });
 
     // EVENT HANDLERS FOR EXTERNAL NAV LINKS
@@ -39,24 +40,41 @@ $(document).ready(function() {
     });
 
 
-    // EVENT HANDLERS FOR PORTFOLIO LINKS
 
     // EVEN HANDLER FOR OVERLAY
-
     var showOverlay = function(link) {
         $(".overlay").fadeIn();
+        if (link === "portfolio") {
+            showPortfolio();
+        } else if (link === "about") {
+            showAbout();
+        }
+    };
+
+    // FUNCTION TO DISPLAY PORTFOLIO INDEX
+
+    var showPortfolio = function() {
+        $(".portfolio-box").show();
     };
 
 
+    // FUNCTION TO DISPLAY ABOUT PAGE
+    var showAbout = function() {
+        $(".about-box").show();
+    };
+
+    // EVENT HANDLERS FOR PORTFOLIO LINKS
 
 
-    // EVENT HANDLER FOR OVERLAY (RETURN TO PORTFOLIO)
+
+    // EVENT HANDLER FOR OVERLAY (RETURN TO PORTFOLIO / ABOUT)
     $(".overlay").on("click", function() {
         $(".overlay").fadeOut();
+        $(".portfolio-box, .about-box").hide();
     });
 
     // EVENT HANDLER FOR BODY (RETURN TO HOME)
-    $(".underlay").on("click", function() {
+    $(".underlay, .poster").on("click", function() {
         $(".filter-box").removeClass("filter");
         $(".filter-box").addClass("unfilter");
         $(".internal").removeClass("active");
