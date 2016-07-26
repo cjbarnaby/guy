@@ -39,8 +39,6 @@ $(document).ready(function() {
         window.open(externalLinks[id], '_blank');
     });
 
-
-
     // EVEN HANDLER FOR OVERLAY
     var showOverlay = function(link) {
         $(".overlay").fadeIn();
