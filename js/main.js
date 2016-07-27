@@ -26,6 +26,7 @@ $(document).ready(function() {
     $(".internal").on("click", function() {
         var link = $(this).attr("id");
         $(".overlay, .overlay-box").hide();
+        $(".overlay-image").remove();
         $(".filter-box").addClass("filter");
         $(".filter-box").removeClass("unfilter");
         $(".internal").removeClass("active");
@@ -39,7 +40,7 @@ $(document).ready(function() {
         window.open(externalLinks[id], '_blank');
     });
 
-    // EVEN HANDLER FOR OVERLAY
+    // EVENT HANDLER FOR OVERLAY
     var showOverlay = function(link) {
         $(".overlay").fadeIn();
         if (link === "portfolio") {
@@ -69,17 +70,53 @@ $(document).ready(function() {
     };
 
     // EVENT HANDLERS FOR PORTFOLIO LINKS
+    $(".content-tile").on("click", function(e) {
+        $(".overlay-image").remove();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        var id = $(this).attr("id");
+        showImage(id);
+    });
+
+    var showImage = function(id) {
+        if ((id === "ask_izzy") || (id === "maccas")) {
+            for (var i = 0; i < multi_image[id].length; i++) {
+                addImage(multi_image[id][i]);
+            }
+        } else {
+            addImage(id);
+        }
+    };
+
+    var addImage = function(image) {
+        var path = image + ".png";
+        var url = "assets/" + path;
+        var $img = $("<img></img>");
+        $img.addClass("overlay-image");
+        $img.attr("src", url);
+        $(".overlay").append($img);
+    };
 
 
 
     // EVENT HANDLER FOR OVERLAY (RETURN TO PORTFOLIO / ABOUT)
     $(".overlay").on("click", function() {
+        $(".overlay-image").remove();
         $(".overlay").fadeOut();
         $(".portfolio-box, .about-box").hide();
+        console.log("overlay");
+    });
+
+
+    $(".overlay").on("click", ".overlay-image", function(e) {
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        $(".overlay-image").remove();
     });
 
     // EVENT HANDLER FOR BODY (RETURN TO HOME)
     $(".underlay, .poster").on("click", function() {
+        $(".overlay-image").remove();
         $(".filter-box").removeClass("filter");
         $(".filter-box").addClass("unfilter");
         $(".internal").removeClass("active");
