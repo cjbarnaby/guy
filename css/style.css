@@ -245,6 +245,48 @@ body {
   display: none;
 }
 
+.slideshow {
+  z-index: 10;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  text-align: center;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1, 1) rotate(90deg) translateX(-50%);
+  }
+  50% {
+    transform: scale(1.5, 1.5) rotate(90deg) translateX(-50%);
+  }
+}
+
+.overlay::after {
+  z-index: 10;
+  font-size: 2em;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  color: black;
+  content: "\226B";
+  /*transform: rotate(90deg) translate(-50%, -50%);*/
+  animation: pulse 2s infinite;
+  display: none;
+}
+
+.slideshow-image {
+  display: inline-block;
+  z-index: 15;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+
+.carousel {
+  min-width: 100vw;
+}
 /*///////////////////*/
 /* ABOUT CLASSES */
 /*///////////////////*/
