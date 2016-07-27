@@ -95,8 +95,8 @@ $(document).ready(function() {
         $img.addClass("overlay-image");
         $img.attr("src", url);
         $(".overlay").append($img);
+        $(".overlay-image").fadeIn();
     };
-
 
 
     // EVENT HANDLER FOR OVERLAY (RETURN TO PORTFOLIO / ABOUT)
