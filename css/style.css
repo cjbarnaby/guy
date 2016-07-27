@@ -132,7 +132,7 @@ body {
   color: black;
   text-align: center;
   letter-spacing: 2px;
-  width: 90%;
+  width: 100%;
 }
 
 .content-tile-header {
@@ -160,8 +160,62 @@ body {
   opacity: 0;
 }
 
-.content-tile:hover {
-  
+.content-tile:after {
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4;
+  background-size: cover;
+}
+
+
+#banana-boat:after {
+    background-image: url("../assets/tile-banana-boat.png");
+}
+
+#fin:after {
+    background-image: url("../assets/tile-fin.png");
+
+}
+
+#tefal:after {
+
+    background-image: url("../assets/tile-tefal.png");
+
+}
+
+#maccas:after {
+    background-image: url("../assets/tile-maccas.png");
+
+}
+
+#fitbit:after {
+    background-image: url("../assets/tile-fitbit.png");
+
+}
+
+#ask-izzy:after {
+    background-image: url("../assets/tile-askizzy.png");
+
+}
+
+#one-punch:after {
+    background-image: url("../assets/tile-one-punch.png");
+
+}
+
+#duracell:after {
+    background-image: url("../assets/tile-duracell.png");
+
+}
+
+#sony:after {
+    background-image: url("../assets/tile-sony.png");
+
 }
 
 .content-tile-campaign {
