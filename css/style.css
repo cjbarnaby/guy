@@ -25,6 +25,21 @@ body {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.about-box h1, h2 {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: rgba(1,1,1, 0.6);
+}
+
+.about-box h2 {
+  font-size: 1.1em;
+}
+
 /*////////////*/
 /* CONTAINERS */
 /*////////////*/
@@ -53,13 +68,16 @@ body {
 }
 .overlay-box {
   display: none;
-  width: 590px;
-  height: 590px;
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.portfolio-box {
+  width: 590px;
+  height: 590px;
 }
 /*//////////*/
 /*NAVIGATION*/
@@ -291,6 +309,13 @@ body {
 /* ABOUT CLASSES */
 /*///////////////////*/
 
+.about-box {
+  background-color: rgba(255,255,255,0.8);
+  color: black;
+  padding: 10px 40px 10px 40px;
+}
+
+
 /*////////////////*/
 /* HELPER CLASSES */
 /*////////////////*/
@@ -338,15 +363,38 @@ body {
 }
 
 @media (max-width: 750px) {
-  .overlay-box {
+
+  .portfolio-box {
     width: 80%;
     height: 80%;
     overflow-y: auto;
+  }
 
+  .content-tile-header {
+    font-size: 24px;
+  }
+
+  .content-tile-campaign {
+    font-size: 18px;
+  }
+
+  .content-tile-text {
+    font-size: 20px;
+    max-width: 80%;
   }
 
   .content-tile {
     width: 100%;
     margin: 10px;
+  }
+
+  .about-box {
+    width: 80vw;
+    top: 30%;
+
+  }
+
+  .about-box p {
+    font-size: 10px;
   }
 }
