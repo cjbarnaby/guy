@@ -43,8 +43,8 @@ body {
 .underlay, .overlay{
   position: fixed;
   left: 0;
-  width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 .overlay {
@@ -280,6 +280,7 @@ body {
   z-index: 15;
   max-width: 100vw;
   max-height: 100vh;
+  margin-bottom: 20px;
 }
 
 
@@ -334,4 +335,18 @@ body {
 
 .active {
   font-weight: 700;
+}
+
+@media (max-width: 750px) {
+  .overlay-box {
+    width: 80%;
+    height: 80%;
+    overflow-y: auto;
+
+  }
+
+  .content-tile {
+    width: 100%;
+    margin: 10px;
+  }
 }
