@@ -36,7 +36,9 @@ $(document).ready(function() {
     $(".internal").on("click", function() {
         var link = $(this).attr("id");
         $(".overlay, .overlay-box").hide();
-        $(".overlay-image").remove();
+        $('.overlay-image').fadeOut(function() {
+            $(".overlay-image").remove();
+        });
         $(".filter-box").addClass("filter");
         $(".filter-box").removeClass("unfilter");
         $(".internal").removeClass("active");
@@ -83,10 +85,12 @@ $(document).ready(function() {
 
     // GENERAL - EVENT HANDLER FOR OVERLAY (RETURN TO PORTFOLIO / ABOUT)
     $(".overlay").on("click", function() {
+        $(".overlay").removeClass("scroll");
         $(".overlay-image").remove();
+        $(".filter-box").removeClass("filter");
+        $(".filter-box").addClass("unfilter");
         $(".overlay").fadeOut();
         $(".portfolio-box, .about-box").hide();
-        console.log("overlay");
     });
 
 ////////////////////////////////
@@ -107,7 +111,10 @@ $(document).ready(function() {
 
     // PORTFOLIO - EVENT HANDLERS FOR PORTFOLIO LINKS TO DISPLAY IMAGE
     $(".content-tile").on("click", function(e) {
-        $(".overlay-image").remove();
+        $('.overlay-image').fadeOut(function() {
+            $(".overlay-image").remove();
+        });
+        $(".portfolio-box").addClass("filter");
         e.stopPropagation();
         e.stopImmediatePropagation();
         var id = $(this).attr("id");
@@ -120,7 +127,7 @@ $(document).ready(function() {
             var $slideshow = $("<div></div>");
             $slideshow.addClass("slideshow");
             $slideshow.append( $("<div></div>").addClass("carousel") );
-            $(".overlay").append($slideshow);
+            $(".overlay").addClass("scroll").append($slideshow);
             $(".slideshow").fadeIn();
             for (var i = 0; i < multi_image[id].length; i++) {
                 addSlideshowImage(multi_image[id][i]);
@@ -129,6 +136,7 @@ $(document).ready(function() {
             addImage(id);
         }
     };
+
 
     // PORTFOLIO - ADD SINGLE IMAGE TO OVERLAY
     var addImage = function(image) {
@@ -155,14 +163,23 @@ $(document).ready(function() {
     $(".overlay").on("click", ".overlay-image", function(e) {
         e.stopPropagation();
         e.stopImmediatePropagation();
-        $(".overlay-image").remove();
+        $(".portfolio-box").removeClass("filter");
+        $(".portfolio-box").addClass("unfilter");
+        $(".overlay").removeClass("scroll");
+        $('.overlay-image').fadeOut(function() {
+            $(".overlay-image").remove();
+        });
+
     });
 
     // PORTFOLIO - EVENT HANDLER FOR SLIDESHOW (RETURN TO PORTFOLIO)
     $(".overlay").on("click", ".carousel, .slideshow-image, .slideshow", function(e) {
         e.stopPropagation();
         e.stopImmediatePropagation();
+        $(".portfolio-box").removeClass("filter");
+        $(".portfolio-box").addClass("unfilter");
         $(".slideshow").remove();
+        $(".overlay").removeClass("scroll");
     });
 
 });
