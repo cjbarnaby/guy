@@ -169,7 +169,6 @@ $(document).ready(function() {
         $('.overlay-image').fadeOut(function() {
             $(".overlay-image").remove();
         });
-
     });
 
     // PORTFOLIO - EVENT HANDLER FOR SLIDESHOW (RETURN TO PORTFOLIO)
