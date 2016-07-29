@@ -144,6 +144,21 @@ a {
   text-align: center;
   vertical-align: top;
   margin: 1px;
+  -moz-transition: all .2s;
+ -o-transition: all .2s;
+ -webkit-transition: all .2s;
+ transition: all .2s;
+
+}
+
+
+
+.content-tile:hover .content-tile-text {
+  opacity: 1;
+}
+
+.content-tile:focus .content-tile-text {
+  opacity: 1;
 }
 
 .content-tile > div {
@@ -176,6 +191,13 @@ a {
   font-weight:400;
   transition: all 0.5s;
   opacity: 0;
+}
+
+.content-tile-text::before {
+  content: "\201C"
+}
+.content-tile-text::after {
+  content: "\201D"
 }
 
 .content-tile::after {
@@ -362,6 +384,8 @@ a {
   font-weight: 700;
 }
 
+
+
 @media (max-width: 750px) {
 
   .portfolio-box {
@@ -369,32 +393,31 @@ a {
     height: 80%;
     overflow-y: auto;
   }
-
   .content-tile-header {
     font-size: 24px;
   }
-
   .content-tile-campaign {
     font-size: 18px;
   }
-
   .content-tile-text {
     font-size: 20px;
     max-width: 80%;
+    opacity: 0.9;
   }
-
   .content-tile {
     width: 100%;
     margin: 10px;
+    transition: none;
   }
-
   .about-box {
     width: 80vw;
     top: 30%;
-
   }
-
   .about-box p {
     font-size: 10px;
+  }
+  .poster {
+    max-width: 100vw;
+    height: auto;
   }
 }

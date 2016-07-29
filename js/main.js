@@ -98,11 +98,11 @@ $(document).ready(function() {
 ////////////////////////////////
 
     // PORTFOLIO - CONTENT TILE HOVER EFFECTS
-    $(".content-tile").on("mouseenter", function() {
-        $(this).find(".content-tile-text").css("opacity", 1);
-    }).on("mouseleave", function() {
-        $(this).find(".content-tile-text").css("opacity", 0);
-    });
+    // $(".content-tile").on("mouseenter", function() {
+    //     $(this).find(".content-tile-text").css("opacity", 1);
+    // }).on("mouseleave", function() {
+    //     $(this).find(".content-tile-text").css("opacity", 0);
+    // });
 
     // PORTFOLIO - FUNCTION TO DISPLAY PORTFOLIO INDEX
     var showPortfolio = function() {
